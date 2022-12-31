@@ -24,7 +24,7 @@ class Superadmin_login : AppCompatActivity() {
 
         login.setOnClickListener{
             if (user_name!!.text.toString() == "admin" && password!!.text.toString() == "admin") {
-                startActivity(Intent(this,Superadmin_dashboard::class.java))
+                startActivity(Intent(this,Add_station::class.java))
                 Toast.makeText(applicationContext, "Redirecting...", Toast.LENGTH_SHORT).show()
             }
             else {
