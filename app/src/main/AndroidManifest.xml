@@ -13,6 +13,13 @@
         android:theme="@style/Theme.EFIR"
         tools:targetApi="31">
         <activity
+            android:name=".Add_station_form"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Superadmin_dashboard"
             android:exported="false">
             <meta-data
