@@ -19,8 +19,8 @@
 
     <EditText
         android:id="@+id/txtusernm"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
+        android:layout_width="356dp"
+        android:layout_height="51dp"
         android:drawablePadding="20dp"
         android:ems="10"
         android:gravity="left"
@@ -36,8 +36,8 @@
 
     <EditText
         android:id="@+id/txtemail"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
+        android:layout_width="355dp"
+        android:layout_height="53dp"
         android:layout_marginTop="30dp"
         android:drawablePadding="20dp"
         android:ems="10"
@@ -54,8 +54,8 @@
 
     <EditText
         android:id="@+id/txtpass"
-        android:layout_width="match_parent"
-        android:layout_height="50sp"
+        android:layout_width="347dp"
+        android:layout_height="54dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="39dp"
         android:layout_marginEnd="30dp"
@@ -72,20 +72,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtemail"
         tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imgupload"
-        android:layout_width="344dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="30dp"
-        android:contentDescription="TODO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtpass"
-        tools:ignore="VectorDrawableCompat" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -110,13 +96,26 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="148dp"
         android:layout_marginEnd="30dp"
-        android:text="SIGN UP"
+        android:text="Register"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgupload" />
+        app:layout_constraintTop_toBottomOf="@+id/txtpass" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="370dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/District"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpass" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
