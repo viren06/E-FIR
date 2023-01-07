@@ -5,37 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:background="@drawable/background_img"
+    android:padding="30dp"
+    android:background="@drawable/blur"
     tools:context=".Superadmin_login">
 
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_height="match_parent"
+
         android:orientation="vertical"
-        android:padding="30dp">
+        android:padding="20dp">
 
         <TextView
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="30dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/passion_one_bold"
-            android:padding="30dp"
+
             android:text="E-FIR"
-            android:textColor="@color/title"
+
             android:textSize="70dp" />
 
         <EditText
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginTop="100dp"
             android:layout_gravity="center"
             android:background="@drawable/et_style"
             android:hint="Email"
-            android:inputType="textEmailAddress"
+            android:inputType="textPersonName"
 
             android:padding="10dp" />
 
@@ -44,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/et_style"
             android:hint="Password"
             android:inputType="textPassword"
@@ -54,13 +56,14 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="114dp"
-            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
             android:layout_gravity="center"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@color/santru"
+            android:layout_marginTop="42dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/mybutton"
             android:text="login"
-            android:textSize="15dp"
+            android:textSize="18dp"
             android:textStyle="bold"
 
             />
