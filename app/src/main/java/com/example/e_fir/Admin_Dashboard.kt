@@ -1,28 +1,18 @@
 package com.example.e_fir
 
-import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 
-class Superadmin_dashboard : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+class Admin_Dashboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_superadmin_dashboard)
-
-        val add_station=findViewById<Button>(R.id.button2)
-
-        add_station.setOnClickListener{
-            startActivity(Intent(this,Add_station_form::class.java))
-
-        }
+        setContentView(R.layout.activity_admin_dashboard)
     }
 
     //otion menue
@@ -31,17 +21,18 @@ class Superadmin_dashboard : AppCompatActivity() {
         return true
     }
     //option menue commands and next activity
-    override fun onOptionsItemSelected(item: MenuItem):Boolean{
-        return when(item.itemId){
-            R.id.logout->{
+    override fun onOptionsItemSelected(item: MenuItem):Boolean {
+        return when (item.itemId) {
+            R.id.logout -> {
                 FirebaseAuth.getInstance().signOut()
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle("LOGOUT")
                 builder.setMessage("Do You want to logout from Applicatiom?")
-                builder.setPositiveButton("Yes",{ dialogInterface : DialogInterface, i : Int ->
+                builder.setPositiveButton("Yes", { dialogInterface: DialogInterface, i: Int ->
                     finish()
-                    startActivity(Intent(this,Superadmin_login::class.java))})
-                builder.setNegativeButton("No",{ dialogInterface : DialogInterface, i: Int ->})
+                    startActivity(Intent(this, Superadmin_login::class.java))
+                })
+                builder.setNegativeButton("No", { dialogInterface: DialogInterface, i: Int -> })
                 builder.show()
                 true
             }
@@ -49,9 +40,8 @@ class Superadmin_dashboard : AppCompatActivity() {
 //                startActivity(Intent(this, Edit_profile::class.java))
 //                true
 //            }
-            else ->super.onOptionsItemSelected(item)
+            else -> super.onOptionsItemSelected(item)
 
         }
     }
-
 }
