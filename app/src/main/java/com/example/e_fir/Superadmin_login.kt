@@ -17,7 +17,6 @@ import com.google.firebase.database.ValueEventListener
 
 class Superadmin_login : AppCompatActivity() {
 
-    private var tokensender:String?=null
     private var mAuth: FirebaseAuth? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,8 +49,19 @@ class Superadmin_login : AppCompatActivity() {
                         Toast.makeText(applicationContext, "Redirecting to super admin dashboard", Toast.LENGTH_SHORT).show()
                     }
                     else if (task.isSuccessful) {
-//                        mAuth=FirebaseAuth.getInstance()
-//                        val user = mAuth!!.currentUser
+                        mAuth=FirebaseAuth.getInstance()
+                        val user = mAuth!!.currentUser
+                        if (user != null) {
+                            myRef.child(user!!.uid).addListenerForSingleValueEvent(object :ValueEventListener{
+                                override fun onCancelled(p0: DatabaseError) {
+                                    TODO("Not yet implemented")
+                                }
+                                override fun onDataChange(p0: DataSnapshot) {
+                                    var value=p0.getValue(HashMap::class.java)
+                                    myRef.child(user.uid).setValue(value)
+                                }
+                            })
+                        }
 
                         startActivity(Intent(this@Superadmin_login,Admin_Dashboard::class.java))
 
