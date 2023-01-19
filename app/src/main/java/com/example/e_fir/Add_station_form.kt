@@ -34,6 +34,9 @@ class Add_station_form : AppCompatActivity() {
         setContentView(R.layout.activity_add_station_form)
 
         mAuth = FirebaseAuth.getInstance();
+        var user=FirebaseAuth.getInstance().currentUser
+        if(user!=null)
+            updateUi(user)
         var isAllFieldsChecked = false
 
         val registration =findViewById<Button>(R.id.btnreg)
@@ -75,6 +78,7 @@ class Add_station_form : AppCompatActivity() {
                                 var myref= FirebaseDatabase.getInstance().getReference("policestation")
                                 myref.child(user!!.uid.toString()).setValue(hashMap).addOnCompleteListener(this){
                                     Toast.makeText(this,"user created",Toast.LENGTH_SHORT).show()
+                                    updateUi(user)
                                     progressDialog.dismiss()
 
                                     var int1= Intent(this@Add_station_form, Superadmin_dashboard::class.java)
@@ -102,6 +106,20 @@ class Add_station_form : AppCompatActivity() {
             password1.setError("password must be minimum 8 characters")
         }
         return true
+
+    }
+    private fun updateUi(user: FirebaseUser?) {
+        if(user!!.isEmailVerified)
+        {
+            startActivity(Intent(this,Admin_Dashboard::class.java))
+            finish()
+        }
+        else{
+            user.sendEmailVerification()
+            Toast.makeText(this,"Verification mail sent your mail",Toast.LENGTH_LONG).show()
+            startActivity(Intent(this,Superadmin_login::class.java))
+
+        }
 
     }
 }
