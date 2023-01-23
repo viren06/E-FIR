@@ -13,4 +13,6 @@
     <color name="santru">
         #ff8538
     </color>
+    <color name="colorAccent">#DDC794</color>
+    <color name="colorPrimaryDark">#343746</color>
 </resources>
