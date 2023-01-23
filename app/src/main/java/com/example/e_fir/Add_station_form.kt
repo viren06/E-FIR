@@ -43,7 +43,7 @@ class Add_station_form : AppCompatActivity() {
          email=findViewById<EditText>(R.id.txtemail)
          username=findViewById<EditText>(R.id.txtusernm)
          password=findViewById<EditText>(R.id.txtpass)
-         district=findViewById<Spinner>(R.id.spinner)
+         district=findViewById<Spinner>(R.id.spinner2)
 
         registration.setOnClickListener{
             //check password

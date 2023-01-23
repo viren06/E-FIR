@@ -8,15 +8,17 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 
 class Superadmin_dashboard : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_superadmin_dashboard)
 
+        //val add_station=findViewById<ImageView>(R.id.button2)
         val add_station=findViewById<Button>(R.id.button2)
 
         add_station.setOnClickListener{
