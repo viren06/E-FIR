@@ -29,9 +29,10 @@ class MainActivity : AppCompatActivity() {
 
 
         Handler().postDelayed({
+
             startActivity(Intent(this@MainActivity,Superadmin_login::class.java))
             finish()
-        },3500)
+        },3000)
 
 
 
