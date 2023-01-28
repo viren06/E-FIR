@@ -1,5 +1,6 @@
 package com.example.e_fir
 
+import android.annotation.SuppressLint
 import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Color
@@ -20,6 +21,7 @@ import com.google.firebase.database.ValueEventListener
 class Superadmin_login : AppCompatActivity() {
 
     private var mAuth: FirebaseAuth? = null
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_superadmin_login)
@@ -30,6 +32,13 @@ class Superadmin_login : AppCompatActivity() {
         var password=findViewById<EditText>(R.id.textView2)
         var counter=3
         val login=findViewById<Button>(R.id.button)
+
+        val forgetpassword=findViewById<TextView>(R.id.lblforgetPass)
+        forgetpassword.setOnClickListener {
+            startActivity(Intent(this,forgot_password::class.java))
+            Toast.makeText(this,"diracting to forgot password page",Toast.LENGTH_LONG).show()
+        }
+
 
         if(user != null){
             updateUi(user)

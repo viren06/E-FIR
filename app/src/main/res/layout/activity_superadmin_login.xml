@@ -118,26 +118,12 @@ android:background="@color/colorPrimaryDark"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/lblfp" />
+    app:layout_constraintTop_toBottomOf="@+id/lblforgetPass" />
+
+
 
 <TextView
-    android:id="@+id/lblreg"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="144dp"
-    android:layout_marginLeft="144dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="116dp"
-    android:layout_marginRight="116dp"
-    android:text="New User? SIGN UP"
-    android:textColor="@color/colorAccent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/button" />
-
-<TextView
-    android:id="@+id/lblfp"
+    android:id="@+id/lblforgetPass"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="right"
