@@ -25,6 +25,11 @@ class Superadmin_dashboard : AppCompatActivity() {
             startActivity(Intent(this,Add_station_form::class.java))
 
         }
+
+        val manage_station=findViewById<Button>(R.id.button3)
+        manage_station.setOnClickListener {
+            startActivity(Intent(this,Manage_station::class.java))
+        }
     }
 
     //otion menue
