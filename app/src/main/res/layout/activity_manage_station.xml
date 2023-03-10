@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Manage_station"
+    android:background="@drawable/edittext_background"
     >
 
     <TextView
@@ -17,6 +18,7 @@
         android:text="Stations"
         android:textSize="20dp"
         android:textStyle="bold"
+        android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toTopOf="@+id/managestation_rv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,6 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
         tools:listitem="@layout/manage_station_view"
+        android:background="@color/colorPrimaryDark"
         tools:itemCount="8"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
