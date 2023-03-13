@@ -97,7 +97,7 @@
         android:ems="10"
         android:gravity="left"
         android:hint="Username"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:textSize="18dp"
         android:padding="10dp"
         android:paddingLeft="10dp"
