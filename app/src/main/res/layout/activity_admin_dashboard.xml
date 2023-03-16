@@ -10,12 +10,36 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="113dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="240dp"
-        android:text="admin dshboard"
+        android:layout_marginTop="4dp"
+        android:text="admin dashboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_showcomplaint"
+        android:layout_width="410dp"
+        android:layout_height="664dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_miss_vehicle_show"
+        tools:listitem="@layout/missingcomplaint_show" />
+
+    <Button
+        android:id="@+id/btn_miss_vehicle_show"
+        android:layout_width="336dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="38dp"
+        android:text="missing vehicle comlaint show"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

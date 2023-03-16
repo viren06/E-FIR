@@ -15,6 +15,13 @@
         android:theme="@style/Theme.EFIR"
         tools:targetApi="31">
         <activity
+            android:name=".show_vehicle_complaint"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".editStationDetails"
             android:exported="false">
             <meta-data
