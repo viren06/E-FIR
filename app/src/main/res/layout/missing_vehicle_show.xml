@@ -8,32 +8,32 @@
     android:layout_marginTop="4dp"
     android:layout_marginBottom="4dp"
     android:layout_marginLeft="6dp"
-    android:background="@drawable/background_mng_stat"
+
     android:layout_marginRight="6dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardanim"
         android:layout_width="match_parent"
-        android:layout_height="310dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:layout_weight="1"
-        android:background="#fece2f"
+        android:background="#eeeeee"
 
         app:cardCornerRadius="10dp"
-        app:cardElevation="10dp">
+        app:cardElevation="5dp">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="292dp"
             android:orientation="horizontal"
-            android:weightSum="4"
-            >
+            android:weightSum="4">
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="#eeeeee"
                 app:layout_constraintBottom_toTopOf="@+id/txt_rcnumber"
                 app:layout_constraintTop_toTopOf="@+id/txt_rcnumber">
 
@@ -44,8 +44,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="13dp"
-                    android:text="User name"
                     android:fontFamily="@font/passion_one_bold"
+                    android:text="User name"
                     android:textSize="17dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -57,8 +57,8 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/passion_one_bold"
-                    android:textSize="17dp"
                     android:text="Aadhar Number"
+                    android:textSize="17dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_name" />
 
@@ -68,8 +68,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
-                    android:text="Address"
                     android:fontFamily="@font/passion_one_bold"
+                    android:text="Address"
                     android:textSize="17dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_aadharnumber" />
@@ -80,8 +80,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
-                    android:text="User Mail"
                     android:fontFamily="@font/passion_one_bold"
+                    android:text="User Mail"
                     android:textSize="17dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_address" />
@@ -102,11 +102,12 @@
                     android:id="@+id/txt_rcnumber"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/passion_one_bold"
-                    android:textSize="17dp"
                     android:text="Rc book Number"
-                    app:layout_constraintStart_toStartOf="@+id/txt_registration_number"
+                    android:textSize="17dp"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_registration_number" />
 
                 <TextView
@@ -116,8 +117,8 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/passion_one_bold"
-                    android:textSize="17dp"
                     android:text="Relation With User"
+                    android:textSize="17dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_rcnumber" />
 
@@ -128,8 +129,8 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/passion_one_bold"
-                    android:textSize="17dp"
                     android:text="vehicle Details"
+                    android:textSize="17dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_relation" />
 
@@ -139,27 +140,28 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="33dp"
+
                     android:fontFamily="@font/passion_one_bold"
-                    android:textSize="17dp"
-                    android:textColor="#CD4444"
                     android:text="Last Seen date"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_status"
+                    android:textColor="#CD4444"
+                    android:textSize="17dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/vehicle_type_model" />
 
                 <Button
                     android:id="@+id/btn_status"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginEnd="135dp"
-                    android:text="Status"
+                    android:layout_width="91dp"
+                    android:layout_height="47dp"
+                    android:background="@drawable/btn_orange"
                     android:fontFamily="@font/passion_one_bold"
+                    android:text="Status"
+                    android:textColor="#DA342F2F"
                     android:textSize="16dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/txt_lastdate"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_lastdate"
+                    app:layout_constraintVertical_bias="0.0"
                     tools:ignore="TouchTargetSizeCheck" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

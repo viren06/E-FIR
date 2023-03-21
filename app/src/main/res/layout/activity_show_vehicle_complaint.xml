@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_mng_stat"
     tools:context=".show_vehicle_complaint">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -11,11 +12,25 @@
         android:layout_width="410dp"
         android:layout_height="683dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="70dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/missing_vehicle_show"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/passion_one_bold"
+        android:text="Missing Vehicle Details"
+        android:textColor="#DA342F2F"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
