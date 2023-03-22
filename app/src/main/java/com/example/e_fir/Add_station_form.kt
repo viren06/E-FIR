@@ -74,6 +74,7 @@ class Add_station_form : AppCompatActivity() {
                                 hashMap["password"]=password.text.toString()
                                 hashMap["district"]=district.selectedItem.toString()
                                 hashMap["status"]="Open"
+                                hashMap["policestationid"]=userfirebase!!.uid.toString()
 
                                 var myref= FirebaseDatabase.getInstance().getReference("policestation")
                                 myref.child(user!!.uid.toString()).setValue(hashMap).addOnCompleteListener(this){
