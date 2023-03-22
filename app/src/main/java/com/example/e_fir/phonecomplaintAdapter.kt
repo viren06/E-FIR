@@ -24,6 +24,7 @@ class phonecomplaintAdapter (var ctx: Activity, var arlist: ArrayList<showphonec
         var mdetails : TextView =v.findViewById(R.id.txt_details)
         var lastSdate : TextView =v.findViewById(R.id.txt_lastdate)
         var sold : Button =v.findViewById(R.id.btn_status)
+        //val uuid:String?=null
 
 
     }
@@ -43,6 +44,7 @@ class phonecomplaintAdapter (var ctx: Activity, var arlist: ArrayList<showphonec
         holder.relation_with_usr.text=arlist[position].relation_with_user
         holder.mdetails.text=arlist[position].mobile_details
         holder.lastSdate.text=arlist[position].last_seen_date
+        //holder.uuid.toString()
 
         var phone=arlist[position]
 
