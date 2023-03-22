@@ -16,9 +16,11 @@
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/missing_vehicle_show"/>
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/missing_vehicle_show" />
 
     <TextView
         android:id="@+id/textView"
@@ -27,7 +29,7 @@
         android:layout_marginTop="30dp"
         android:fontFamily="@font/passion_one_bold"
         android:text="Missing Vehicle Details"
-        android:textColor="#DA342F2F"
+        android:textColor="#F1F1F1"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

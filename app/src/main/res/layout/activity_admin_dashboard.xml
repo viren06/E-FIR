@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6dd7d7"
+    android:background="@drawable/background_mng_stat"
     tools:context=".Admin_Dashboard">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Admin Dashboard"
+        android:layout_marginTop="64dp"
         android:fontFamily="@font/passion_one_bold"
+        android:text="Admin Dashboard"
+        android:textColor="#F1F1F1"
         android:textSize="35dp"
-        android:textColor="#eeeeee"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,10 +29,10 @@
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView3"
-        app:layout_constraintVertical_bias="0.086"
+        app:layout_constraintVertical_bias="0.008"
         tools:listitem="@layout/missingcomplaint_show" />
 
     <Button
