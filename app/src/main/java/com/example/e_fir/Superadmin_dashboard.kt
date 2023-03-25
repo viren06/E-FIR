@@ -14,9 +14,33 @@ import com.google.firebase.auth.FirebaseAuth
 
 class Superadmin_dashboard : AppCompatActivity() {
 
+     lateinit var goBarChart:Button
+     lateinit var goVehAna:Button
+     lateinit var goPhoAna:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_superadmin_dashboard)
+
+        goBarChart = findViewById(R.id.button_sad)
+        goPhoAna = findViewById(R.id.Phone_analysis_button)
+        goVehAna = findViewById(R.id.Vehicle_analysis_button)
+
+
+        goBarChart.setOnClickListener {
+
+        startActivity(Intent(this,Bargraph_sad::class.java))
+        }
+
+        goPhoAna.setOnClickListener {
+
+            startActivity(Intent(this,Phone_analysis::class.java))
+        }
+
+        goVehAna.setOnClickListener {
+
+            startActivity(Intent(this,Vehicle_analysis::class.java))
+        }
 
         //val add_station=findViewById<ImageView>(R.id.button2)
         val add_station=findViewById<Button>(R.id.button2)
@@ -25,6 +49,8 @@ class Superadmin_dashboard : AppCompatActivity() {
             startActivity(Intent(this,Add_station_form::class.java))
 
         }
+
+
 
         val manage_station=findViewById<Button>(R.id.button3)
         manage_station.setOnClickListener {
