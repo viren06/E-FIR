@@ -14,7 +14,6 @@ import com.google.firebase.auth.FirebaseAuth
 
 class Superadmin_dashboard : AppCompatActivity() {
 
-     lateinit var goBarChart:Button
      lateinit var goVehAna:Button
      lateinit var goPhoAna:Button
 
@@ -22,15 +21,10 @@ class Superadmin_dashboard : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_superadmin_dashboard)
 
-        goBarChart = findViewById(R.id.button_sad)
+
         goPhoAna = findViewById(R.id.Phone_analysis_button)
         goVehAna = findViewById(R.id.Vehicle_analysis_button)
 
-
-        goBarChart.setOnClickListener {
-
-        startActivity(Intent(this,Bargraph_sad::class.java))
-        }
 
         goPhoAna.setOnClickListener {
 

@@ -3,49 +3,41 @@ package com.example.e_fir
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.github.mikephil.charting.charts.RadarChart
-import com.github.mikephil.charting.data.RadarData
-import com.github.mikephil.charting.data.RadarDataSet
-import com.github.mikephil.charting.data.RadarEntry
+import com.github.mikephil.charting.charts.PieChart
+import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.utils.ColorTemplate
 
 class Phone_analysis : AppCompatActivity() {
 
-    lateinit var radarChart2: RadarChart
+    lateinit var pieChart: PieChart
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_phone_analysis)
 
-        radarChart2= findViewById(R.id.Phone_analysis_chart)
+        pieChart = findViewById(R.id.Phone_analysis_chart)
 
-        val list:ArrayList<RadarEntry> = ArrayList()
+        val list:ArrayList<PieEntry> = ArrayList()
 
-        list.add(RadarEntry(100f))
-        list.add(RadarEntry(101f))
-        list.add(RadarEntry(102f))
-        list.add(RadarEntry(103f))
-        list.add(RadarEntry(104f))
+        list.add(PieEntry(80f,"Vadodara"))
+        list.add(PieEntry(200f,"Ahmedabad"))
+        list.add(PieEntry(183f,"Surat"))
+        list.add(PieEntry(245f,"Valsad"))
+        list.add(PieEntry(116f,"Gandhinagar"))
 
-        val radarDataSet= RadarDataSet(list,"List")
+        val pieDataSet= PieDataSet(list,"Report")
 
-        radarDataSet.setColors(ColorTemplate.MATERIAL_COLORS,255)
+        pieDataSet.setColors(ColorTemplate.MATERIAL_COLORS,255)
+        pieDataSet.valueTextColor= Color.BLACK
+        pieDataSet.valueTextSize=15f
 
-        radarDataSet.lineWidth=2f
+        val pieData= PieData(pieDataSet)
 
-        radarDataSet.valueTextColor = Color.RED
+        pieChart.data= pieData
 
-        radarDataSet.valueTextSize=14f
+        pieChart.description.text= "Analysis of Missing Phone Complaints"
 
-        val radarData= RadarData()
+        pieChart.centerText="Analysis of Missing Phone Complaints"
 
-        radarData.addDataSet(radarDataSet)
-
-        radarChart2.data=radarData
-
-
-        radarChart2.description.text= "Radar Chart"
-
-
-        radarChart2.animateY(2000)
+        pieChart.animateY(2000)
     }
 }

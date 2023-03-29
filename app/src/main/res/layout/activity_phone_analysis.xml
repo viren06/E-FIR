@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Phone_analysis">
 
-    <com.github.mikephil.charting.charts.RadarChart
+    <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/Phone_analysis_chart"
         android:layout_width="416dp"
         android:layout_height="529dp"
