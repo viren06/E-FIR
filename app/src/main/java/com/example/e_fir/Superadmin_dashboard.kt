@@ -10,12 +10,13 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
+import androidx.cardview.widget.CardView
 import com.google.firebase.auth.FirebaseAuth
 
 class Superadmin_dashboard : AppCompatActivity() {
 
-     lateinit var goVehAna:Button
-     lateinit var goPhoAna:Button
+     lateinit var goVehAna:CardView
+     lateinit var goPhoAna:CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +38,7 @@ class Superadmin_dashboard : AppCompatActivity() {
         }
 
         //val add_station=findViewById<ImageView>(R.id.button2)
-        val add_station=findViewById<Button>(R.id.button2)
+        val add_station=findViewById<CardView>(R.id.button2)
 
         add_station.setOnClickListener{
             startActivity(Intent(this,Add_station_form::class.java))
@@ -46,7 +47,7 @@ class Superadmin_dashboard : AppCompatActivity() {
 
 
 
-        val manage_station=findViewById<Button>(R.id.button3)
+        val manage_station=findViewById<CardView>(R.id.button3)
         manage_station.setOnClickListener {
             startActivity(Intent(this,Manage_station::class.java))
         }
