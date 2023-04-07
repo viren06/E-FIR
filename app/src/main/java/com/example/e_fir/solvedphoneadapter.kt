@@ -12,10 +12,11 @@ import com.google.firebase.database.FirebaseDatabase
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-class phonecomplaintAdapter (var ctx: Activity, var arlist: ArrayList<showphonecomplaintModel>): RecyclerView.Adapter<phonecomplaintAdapter.viewholder>() {
+
+class solvedphoneadapter (var ctx: Activity, var arlist: ArrayList<showphonecomplaintModel>): RecyclerView.Adapter<solvedphoneadapter.viewholder>() {
     val database = FirebaseDatabase.getInstance()
 
-    inner class viewholder(v: View):RecyclerView.ViewHolder(v){
+    inner class viewholder(v: View): RecyclerView.ViewHolder(v){
         var user_name : TextView = v.findViewById(R.id.txt_name)
         var aadhar_number : TextView = v.findViewById(R.id.txt_aadharnumber)
         var address : TextView = v.findViewById(R.id.txt_address)
@@ -25,14 +26,14 @@ class phonecomplaintAdapter (var ctx: Activity, var arlist: ArrayList<showphonec
         var relation_with_usr : TextView =v.findViewById(R.id.txt_relation)
         var mdetails : TextView =v.findViewById(R.id.txt_details)
         var lastSdate : TextView =v.findViewById(R.id.txt_lastdate)
-        var sold : Button =v.findViewById(R.id.btn_status)
+        var  sdate :TextView =v.findViewById(R.id.txt_sdate)
         //val uuid:String?=null
 
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewholder {
-        val v=ctx.layoutInflater.inflate(R.layout.missingcomplaint_show,parent,false)
+        val v=ctx.layoutInflater.inflate(R.layout.solved_phone_view,parent,false)
         return  viewholder(v)
     }
 
@@ -46,35 +47,36 @@ class phonecomplaintAdapter (var ctx: Activity, var arlist: ArrayList<showphonec
         holder.relation_with_usr.text=arlist[position].relation_with_user
         holder.mdetails.text=arlist[position].mobile_details
         holder.lastSdate.text=arlist[position].last_seen_date
+        //holder.sdate.text=arlist[position].stime
         //holder.uuid.toString()
 
-        var phone=arlist[position]
-
-        if(arlist[position].status=="solved"){
-            holder.sold.isEnabled=false
-        }
-        else
-        {
-            holder.sold.isEnabled=true
-        }
-        phone.status="processing"
-
-        holder.sold.setOnClickListener {
-            phone.status="solved"
-            val builder = AlertDialog.Builder(ctx)
-            builder.setTitle("SOLVED")
-            builder.setMessage("Are you sure about the solveing of complaint?")
-            builder.setPositiveButton("Yes",{ dialogInterface : DialogInterface, i : Int ->
-                val myref=database.getReference("phone")
-                val current = LocalDateTime.now()
-                val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
-                val formatted = current.format(formatter)
-                phone.stime=formatted
-                myref.child(arlist[position].phoneid.toString()).setValue(phone)
-            })
-            builder.setNegativeButton("No",{ dialogInterface : DialogInterface, i: Int ->})
-            builder.show()
-        }
+//        var phone=arlist[position]
+//
+//        if(arlist[position].status=="solved"){
+//            holder.sold.isEnabled=false
+//        }
+//        else
+//        {
+//            holder.sold.isEnabled=true
+//        }
+//        phone.status="processing"
+//
+//        holder.sold.setOnClickListener {
+//            phone.status="solved"
+//            val builder = AlertDialog.Builder(ctx)
+//            builder.setTitle("SOLVED")
+//            builder.setMessage("Are you sure about the solveing of complaint?")
+//            builder.setPositiveButton("Yes",{ dialogInterface : DialogInterface, i : Int ->
+//                val myref=database.getReference("phone")
+//                val current = LocalDateTime.now()
+//                val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
+//                val formatted = current.format(formatter)
+//                phone.stime=formatted
+//                myref.child(arlist[position].phoneid.toString()).setValue(phone)
+//            })
+//            builder.setNegativeButton("No",{ dialogInterface : DialogInterface, i: Int ->})
+//            builder.show()
+//        }
     }
 
     override fun getItemCount(): Int {

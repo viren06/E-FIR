@@ -49,7 +49,7 @@ class Superadmin_dashboard : AppCompatActivity() {
 
         val manage_station=findViewById<CardView>(R.id.button3)
         manage_station.setOnClickListener {
-            startActivity(Intent(this,Manage_station::class.java))
+            startActivity(Intent(this,show_complaint_sadmin::class.java))
         }
     }
 

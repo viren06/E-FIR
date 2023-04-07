@@ -27,7 +27,7 @@ android:background="#eeeeee"
         android:layout_marginTop="8dp"
 
         android:fontFamily="@font/passion_one_bold"
-        android:text="SUPER-ADMIN LOGIN"
+        android:text="LOGIN"
         android:textColor="#DA342F2F"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"

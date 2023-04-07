@@ -9,6 +9,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.FirebaseDatabase
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 class vehiclecomplaintAdapter  (var ctx: Activity, var arlist: ArrayList<showvehiclecomplaintModel>): RecyclerView.Adapter<vehiclecomplaintAdapter.viewholder>()  {
     val database = FirebaseDatabase.getInstance()
@@ -56,11 +58,16 @@ class vehiclecomplaintAdapter  (var ctx: Activity, var arlist: ArrayList<showveh
 
         holder.sold.setOnClickListener {
             vehicle.status="solved"
+
             val builder = AlertDialog.Builder(ctx)
             builder.setTitle("SOLVED")
             builder.setMessage("Are you sure about the solveing of complaint?")
             builder.setPositiveButton("Yes",{ dialogInterface : DialogInterface, i : Int ->
                 val myref=database.getReference("vehicle")
+                val current = LocalDateTime.now()
+                val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
+                val formatted = current.format(formatter)
+                vehicle.stime=formatted
                 myref.child(arlist[position].vehicleid.toString()).setValue(vehicle)
             })
             builder.setNegativeButton("No",{ dialogInterface : DialogInterface, i: Int ->})

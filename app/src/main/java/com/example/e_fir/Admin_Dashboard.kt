@@ -23,6 +23,7 @@ class Admin_Dashboard : AppCompatActivity() {
     private var mauth: FirebaseAuth?=null
     private lateinit var showcomplaintrv: RecyclerView
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin_dashboard)
@@ -38,6 +39,11 @@ class Admin_Dashboard : AppCompatActivity() {
             startActivity(Intent(this,show_vehicle_complaint::class.java))
         }
 
+        var solved_complaint=findViewById<Button>(R.id.btn_solved_complaint)
+        solved_complaint.setOnClickListener {
+            startActivity(Intent(this,Solved_complaint::class.java))
+        }
+
 
         val myref=database.getReference("phone")
         myref.addValueEventListener(object : ValueEventListener {
@@ -50,7 +56,7 @@ class Admin_Dashboard : AppCompatActivity() {
                         val value = v.getValue(showphonecomplaintModel::class.java)
                         Log.d("key", value.toString())
                         if (value != null) {
-                            if (unm==value.sid){
+                            if (unm==value.sid && value.status=="processing"){
                                 data.add(value)
                             }
 

@@ -90,7 +90,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Manage Stations"
+                android:text="Manage Complaint"
                 android:layout_gravity="center"
                 android:textSize="20sp"
                 android:fontFamily="@font/passion_one_bold"
@@ -186,7 +186,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="110dp"
         android:fontFamily="@font/passion_one_bold"
-        android:text="Admin Dashboard"
+        android:text="S-Admin Dashboard"
         android:textColor="#eeeeee"
         android:textSize="40sp" />
 

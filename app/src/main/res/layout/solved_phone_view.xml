@@ -146,19 +146,18 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_details" />
 
-                <Button
-                    android:id="@+id/btn_status"
-                    android:layout_width="108dp"
-                    android:layout_height="48dp"
-                    android:layout_marginBottom="4dp"
-                    android:background="@drawable/btn_orange"
+                <TextView
+                    android:id="@+id/txt_sdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="@font/passion_one_bold"
-                    android:text="Status"
-                    android:textColor="#DA342F2F"
-                    android:textSize="16dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    android:text="Complaint Solved Date"
+                    android:textSize="17dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_lastdate" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>

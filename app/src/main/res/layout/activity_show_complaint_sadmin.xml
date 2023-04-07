@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".show_complaint_sadmin">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_phone"
+        android:layout_width="409dp"
+        android:layout_height="334dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/missingcomplaint_show" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_vehicle"
+        android:layout_width="410dp"
+        android:layout_height="328dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_phone"
+        tools:listitem="@layout/missing_vehicle_show" />
+</androidx.constraintlayout.widget.ConstraintLayout>
