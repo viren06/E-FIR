@@ -47,7 +47,7 @@ class solvedphoneadapter (var ctx: Activity, var arlist: ArrayList<showphonecomp
         holder.relation_with_usr.text=arlist[position].relation_with_user
         holder.mdetails.text=arlist[position].mobile_details
         holder.lastSdate.text=arlist[position].last_seen_date
-        //holder.sdate.text=arlist[position].stime
+        holder.sdate.text=arlist[position].stime
         //holder.uuid.toString()
 
 //        var phone=arlist[position]

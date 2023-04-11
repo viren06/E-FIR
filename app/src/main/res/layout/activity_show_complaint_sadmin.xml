@@ -17,7 +17,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/missingcomplaint_show" />
+        tools:listitem="@layout/solved_phone_view" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_vehicle"
@@ -29,5 +29,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rv_phone"
-        tools:listitem="@layout/missing_vehicle_show" />
+        tools:listitem="@layout/solved_vehicle_view" />
 </androidx.constraintlayout.widget.ConstraintLayout>
