@@ -55,5 +55,38 @@ class show_complaint_sadmin : AppCompatActivity() {
 
         })
         showcomplaintrv.layoutManager= LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
+
+        //show vehicle complaint
+        var data1= arrayListOf<showvehiclecomplaintModel>()
+        showvehiclecomplaintrv=findViewById(R.id.rv_vehicle)
+
+        val myRef=database.getReference("vehicle")
+        myRef.addValueEventListener(object : ValueEventListener {
+
+            override fun onDataChange(datasnapshot: DataSnapshot) {
+                data1.clear()
+                var ad=vehiclecomplaintAdapter(this@show_complaint_sadmin,data1)
+                if(datasnapshot.exists()) {
+                    for (v in datasnapshot.children) {
+                        val value = v.getValue(showvehiclecomplaintModel::class.java)
+                        Log.d("key", value.toString())
+                        if (value != null) {
+                            if (value.status=="processing"){
+                                data1.add(value)
+                            }
+
+                        }
+                    }
+                    showvehiclecomplaintrv.adapter = ad
+                }
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+        })
+        showvehiclecomplaintrv.layoutManager= LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
     }
 }
